@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.birzeit.example.project.Info">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fitsSystemWindows="true"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="1dp"
+    android:layout_marginTop="10dp"
+    app:cardElevation="5dp"
+    android:id="@+id/viewCard">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="283dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/p111" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/title1"
+        style="@style/InfoTitleStyle"
+        android:layout_below="@+id/viewCard"
+        android:paddingRight="10dp"
+        android:text="مسار بتير" />
+
+    <TextView
+        android:id="@+id/description1"
+        style="@style/InfoDescStyle"
+        android:layout_below="@+id/title1"
+        android:text="@string/oneDes"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/featuresTitle"
+        style="@style/InfoDescStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description1"
+        android:text="المميزات:"
+         />
+
+    <TextView
+        android:id="@+id/features1"
+        style="@style/InfoDescStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/featuresTitle"
+        android:text="مناسب للأطفال والمجموعات."
+         />
+
+    <Button
+        android:id="@+id/book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_below="@+id/features1"
+        android:layout_centerHorizontal="true"
+        android:text="احجز المسار" />
+
+</RelativeLayout>

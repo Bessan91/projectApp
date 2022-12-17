@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A7AC77"
+    tools:context=".IntrodutionActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:text="أهلا وسهلا بك في تطبيق "
+        android:textColor="#673D3D"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/textView"
+        app:srcCompat="@drawable/logo" />
+
+    <ViewFlipper
+        android:id="@+id/flip"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/imageViewLogo"
+        android:layout_marginTop="15dp">
+
+    </ViewFlipper>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="634dp"
+        android:layout_marginBottom="30dp"
+        android:background="#B1B9BA"
+        android:gravity="center"
+        android:text="تسجيل الدخول"
+        android:textColor="#673D3D"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:onClick="login"
+        app:backgroundTint="#B1B9BA" />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="177dp"
+        android:layout_height="68dp"
+        android:layout_below="@+id/flip"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="101dp"
+        android:background="#673D3D"
+        android:gravity="center"
+        android:text="إنشاء حساب "
+        android:textColor="#B1B9BA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:onClick="sign"
+        app:backgroundTint="#673D3D"
+
+        />
+
+
+</RelativeLayout>
